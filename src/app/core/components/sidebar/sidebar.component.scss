@@ -1,0 +1,62 @@
+.container {
+  width: 250px;
+  transition: width 0.3s ease;
+  border: 1px solid #d9d9d9;
+  height: 100%;
+  box-shadow: 3px 0px 28px -19px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+.container.closed {
+  width: 70px;
+}
+
+.container .toggle {
+  cursor: pointer;
+  position: absolute;
+  right: -15px;
+  top: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.closed .flex > span:nth-child(2) {
+  display: none;
+}
+
+.logo {
+  background-color: #093545;
+  height: 60px;
+
+  span {
+    color: #fff;
+  }
+}
+
+.menu-active,
+.container .menu-item {
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-active:hover,
+.container .menu-item:hover {
+  background-color: #e0e0e0;
+}
+
+:host ::ng-deep p-button {
+  button {
+    background: #093545;
+    border: 1px solid #093545;
+  }
+}
